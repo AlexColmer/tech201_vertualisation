@@ -59,3 +59,10 @@ Use this link to install ruby -> https://rubyinstaller.org/downloads/
 to check version of ruby use gitbash and comand ruby --version
 
 Virtual box download -> https://www.virtualbox.org/wiki/Download_Old_Builds_6_1
+
+
+to get to the vagrant file 
+- cd to the correct sirectory you are working on in gitbash
+- then use vagrant init ubuntu/xenia164 to get the vagrant file on your system 
+- use vagrant up to connect it to your virtual box 
+
