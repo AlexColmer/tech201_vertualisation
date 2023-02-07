@@ -2,7 +2,21 @@
 
 ## DevOps
 
-DevOps are responsible to tying teams together in a development cycle 
+DevOps are responsible to tying teams together in a development cycle. 
+
+- Breaks silos between developers and operators
+- Development infrastructure as code
+- Automation of deployment pipeline #
+- work together more
+- Continuouse release cycles 
+
+## Cloud
+
+- Data centers 
+- make sure they are running 24/7
+- Offer security - to protect data of users 
+- On prem everyhting is managed by yourself 
+- servers run at a very high temperature so efficient cooling is needed 
 
 - Ease of use
 
