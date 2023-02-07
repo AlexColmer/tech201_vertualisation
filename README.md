@@ -36,3 +36,20 @@ Cost is often overlooked we need to make sure the company is being as efficient 
 - Dont use monliths as they are not reliable as they can brake on one machine and you will not have that application again. 
 
 - risk register highlights specific areas of risks during development. 
+
+## Dev environments 
+
+- creat environments for the development team. a space where the program has been configured and set up in the right way. 
+
+- we do this to make the best decision for the company and create a template for the dev team to work colaberativly. 
+
+### what makes a good Dev environment 
+
+- User freindly, Fast and robust 
+- It should be easy to update and change
+- Should match the production environment as closely as possible 
+- It should be the same for everyone everywhere 
+- It should only support one application. Do npot try to mix and match!!!
+
+
+
