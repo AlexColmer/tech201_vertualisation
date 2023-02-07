@@ -52,4 +52,10 @@ Cost is often overlooked we need to make sure the company is being as efficient 
 - It should only support one application. Do npot try to mix and match!!!
 
 
+as long as devloper has vagrent, virtual box, ruby, bash, git and ssh. they will be able to use the environment 
 
+## Ruby
+Use this link to install ruby -> https://rubyinstaller.org/downloads/
+to check version of ruby use gitbash and comand ruby --version
+
+Virtual box download -> https://www.virtualbox.org/wiki/Download_Old_Builds_6_1
