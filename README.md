@@ -63,6 +63,7 @@ Virtual box download -> https://www.virtualbox.org/wiki/Download_Old_Builds_6_1
 
 to get to the vagrant file 
 - cd to the correct sirectory you are working on in gitbash
-- then use vagrant init ubuntu/xenia164 to get the vagrant file on your system 
+- then use vagrant init ubuntu/xenial64 to get the vagrant file on your VScode
 - use vagrant up to connect it to your virtual box 
-
+- Then use the comand vagrant ssh 
+ 
