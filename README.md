@@ -56,7 +56,7 @@ as long as devloper has vagrent, virtual box, ruby, bash, git and ssh. they will
 
 ## Ruby
 Use this link to install ruby -> https://rubyinstaller.org/downloads/
-to check version of ruby use gitbash and comand ruby --version
+to check version of ruby use gitbash and ruby version --comand
 
 Virtual box download -> https://www.virtualbox.org/wiki/Download_Old_Builds_6_1
 
@@ -66,4 +66,8 @@ to get to the vagrant file
 - then use vagrant init ubuntu/xenial64 to get the vagrant file on your VScode
 - use vagrant up to connect it to your virtual box 
 - Then use the comand vagrant ssh 
+- after this type sudo apt-get update -y
+- then to connect to the internet use sudo apt-get install nginx -y
+- sudo systemctl start nginx
+
  
