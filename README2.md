@@ -126,4 +126,43 @@ the & runs your process in the back ground and stops your process from locking y
 `fg` restarts the process foreground
 
 `tree 
+# How to get app up and running 
+- First you will need to cd into envirnemt twice as it is nested 
+- then cd into spec-test
+- run `gum bundler`
+- after this run `bundle`
+- then run rake spec to check what you need to install into your environment 
+- once in your virutal machine use the comand apt-get update -y
+- once this is complet run sudo apt-get upgrade 
+- once this has run you will need to install nginx use `sudo apt-get install nginx  
+-  then run sudo systemctl enable nginx to enable nginx 
+- then copy your ip adress into a web browser adn you should get nginx load up
+- after this you will need to install nodejs in order to get your app working.
+- to do this first use `sudo apt-get install python-software-properties`
+- the you need to `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+- then use `sudo apt-get install nodejs -y` to install nodejs
+- to install the pm2 `sudo npm install pm2 -g` 
+- use node app.js
+- this will run your app is ready and listening on port 3000
+- you then just need to add `:3000` the end of the ip adress to run the app ion the web browser. 
+
+# how to acces the app through provision
+
+- First you need perform vagrant destroy to destroy your vm which will then allow you to vagran up with all the new code written.
+- to know what apps you need to isntall you can see this through `rake spec`
+- second then need to add in all the apps that need to be isntalled 
+
+![](making_the_app_work.png)
+
+In this screen shot you can see all the installs that are needed to make the app work.
+
+you will also need this line of code in your vagrant file to get the provision file working with your vagrant file `config.vm.provision "shell", path: "provision.sh"`
+once you have got all this down you will be ablke to use `vagrant up` comand again and it should run your vm withought you having to manually install everything one by one.
+
+# Nginx reverse proxy
+
+- A port is a virtual point where network connections start and end
+- A traditional forward proxy server allows multiple clients to route traffic to an external network. For instance, a business may have a proxy that routes and filters employee traffic to the public Internet. A reverse proxy, on the other hand, routes traffic on behalf of multiple servers.
+![](forward_reverse_proxy.png)
+- Through a simple command you can verify the status of the Nginx configuration file: `sudo nano /etc/nginx/sites-available/default` The output will show if the configuration file is correct or, if it is not, it will show the file and the line where the problem is
 
