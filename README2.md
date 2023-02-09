@@ -166,3 +166,18 @@ once you have got all this down you will be ablke to use `vagrant up` comand aga
 ![](forward_reverse_proxy.png)
 - Through a simple command you can verify the status of the Nginx configuration file: `sudo nano /etc/nginx/sites-available/default` The output will show if the configuration file is correct or, if it is not, it will show the file and the line where the problem is
 
+### How to create a reverse proxy 
+- use sudo nano /etc/nginx/sites-available/default to be able to 
+- `location / {
+        proxy_pass http://localhost:8080;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}`
+add this to and chnage where it says 8000 to what ever port your computer is listening on 
+- then run sudo nginx -t
+- finally use sudo systemctl restart nginx
+- the you should just be able to run the ip adress without adding the port number on the end 
