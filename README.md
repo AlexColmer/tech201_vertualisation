@@ -69,5 +69,8 @@ to get to the vagrant file
 - after this type sudo apt-get update -y
 - then to connect to the internet use sudo apt-get install nginx -y
 - sudo systemctl start nginx
+- then go back to VScode and type in config.vm.network "private_netowrk", ip: "192.168.10.100" to get the IP adress of nginx 
+- use vagrant reload to update the virtual box 
+- the type in the IP adress in a web browser to get nginx up
 
  

@@ -86,3 +86,44 @@ DESCRIPTION
 grep is how we search things. grep test will find the word test in a file if it does exist. * measn were does this thing come up in the whjole folder 
 
 ### wild card
+
+
+## Persmision with ls -l
+
+`r`- stands for read (they can read the file)
+
+`w`- write (allows us to change the contents of the file)
+
+`x`- execute (they can execute and run the file)  
+
+Owner (of the file)- Group(who have acces) - Other/all 
+
+`chmod` change file (ch) mode bits (mod). changes permission of who can use the file.
+
+u  = user/owner 
+g = group 
+o = owner
+
+user - group - other
+
+                read    write   execute
+setting:          0        0       0
+binary value:     4        2       1 
+
+4 + 2 + 1 = 7
+777 -> all permissions for all user/group/other
+
+755 -> user can do everything group and other can read and execute. 
+
+`top` is a task manager 
+
+`kill -9 process number` will kill a really stuborn process 
+
+the & runs your process in the back ground and stops your process from locking you out until it is completed 
+
+`ctrl z` stops the process 
+
+`fg` restarts the process foreground
+
+`tree 
+
