@@ -133,7 +133,7 @@ the & runs your process in the back ground and stops your process from locking y
 - after this run `bundle`
 - then run rake spec to check what you need to install into your environment 
 - once in your virutal machine use the comand apt-get update -y
-- once this is complet run sudo apt-get upgrade 
+- once this is complet run sudo apt-get upgrade -y (dont us ethis command on a production environment)
 - once this has run you will need to install nginx use `sudo apt-get install nginx  
 -  then run sudo systemctl enable nginx to enable nginx 
 - then copy your ip adress into a web browser adn you should get nginx load up
@@ -146,7 +146,7 @@ the & runs your process in the back ground and stops your process from locking y
 - this will run your app is ready and listening on port 3000
 - you then just need to add `:3000` the end of the ip adress to run the app ion the web browser. 
 
-# how to acces the app through provision
+# How to acces the app through provision
 
 - First you need perform vagrant destroy to destroy your vm which will then allow you to vagran up with all the new code written.
 - to know what apps you need to isntall you can see this through `rake spec`
@@ -181,3 +181,39 @@ add this to and chnage where it says 8000 to what ever port your computer is lis
 - then run sudo nginx -t
 - finally use sudo systemctl restart nginx
 - the you should just be able to run the ip adress without adding the port number on the end 
+
+# How to work with two data bases 
+
+to get multi machines working make sure that you have this code down.
+- then vagrant up and you should be getting botyh app and data base running 
+- one in the data base ssh start getting mongodb you need to first get the key `udo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv D68FA50FEA312927  # A confirmation of import will be displayed`
+- the  you need to use sudo apt-get update -y 
+- one this is done then sudo apt-get upgrade -y
+- then install the mongodb database with `sudo apt-get install -y mongodb-org=3.2.20 mongodb-org-server=3.2.20 mongodb-org-shell=3.2.20 mongodb-org-mongos=3.2.20 mongodb-org-tools=3.2.20`
+- once this is done you will need to use `sudo systemctl start mongod`
+- then you need to `sudo systemctl status mongod`
+- then finally `sudo systemctl enable mongod`
+- iog this has worked ytou should see `Created symlink /etc/systemd/system/multi-user.target.wants/mongod.service -> /lib/systemd/system/mongod.service.` in the terminal
+
+- normal variable 
+`MY_VAR=hello` to make a variable in linx (use upper case to make the readable)
+
+
+
+
+### after this is installed move over to app 
+
+- start by ruinning this code `sudo nano /etc/mongod.conf` 
+- within this file you will need to find `net:
+ port: 27017
+ bindIp: 127.0.0.1`
+ and change the bindip to `0.0.0.0`
+
+ - then you will to reset mongodb with `sudo systemctl restart mongod`
+ - and then finally enable mongodb with `sudo systemctl enable mongod`
+ - after this you will need to set up an envireonment variable to do this start by inputing `export DB_HOST=mongodb://192.168.10.150:27017/posts`
+ - then you will need to `printenv DB_HOST` to make sur eit is working 
+ - then the last stage you will wite `npm install` one this is done wirte `node app.js` 
+ - then you will write in your browser 192.168.56.10:3000/posts to get pposts working. 
+
+

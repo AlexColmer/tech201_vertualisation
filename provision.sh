@@ -13,7 +13,7 @@ sudo systemctl enable nginx -y
 
 #download nodejs
 sudo apt-get install python-software-properties
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install nodejs -y
 
 #install pm2
@@ -25,4 +25,4 @@ cd app
 cd app
 
 # Install node js
-node app.js
+# node app.js
