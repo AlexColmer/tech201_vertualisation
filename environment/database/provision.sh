@@ -11,7 +11,7 @@ sudo apt-get upgrade -y
 sudo apt-get install -y mongodb-org=3.2.20 mongodb-org-server=3.2.20 mongodb-org-shell=3.2.20 mongodb-org-mongos=3.2.20 mongodb-org-tools=3.2.20
 
 sudo rm /etc/mongod.conf
-sudo cp environment/database/replace_ip /etc/mongod.conf
+sudo cp environment/database/mongodb.conf /etc/mongod.conf
 
 sudo systemctl restart mongod
 sudo systemctl enable mongod
