@@ -1,7 +1,10 @@
+# Where and how to store data.
+
 storage:
- dbPath: /var/lib/mongodb
+ dbPath: /var/lib/mongod
  journal:
-enabled: true
+ enabled: true
+
 #  engine:
 #  mmapv1:
 #  wiredTiger: # where to write logging data.
@@ -9,18 +12,15 @@ enabled: true
 systemLog:
  destination: file
  logAppend: true
-path: /var/log/mongodb/mongod.log
-
- network interfaces
+ path: /var/log/mongodb/mongod.log# network interfaces
 
 net:
  port: 27017
-bindIp: 0.0.0.0
-
-
+ bindIp: 0.0.0.0
 #processManagement: 
-#security: 
+
+#security:
 #operationProfiling: 
 #replication: #sharding: 
-## Enterprise-Only Options: 
-#auditLog: #snmp:
+## Enterprise-Only Options: #auditLog: 
+#snmp:
